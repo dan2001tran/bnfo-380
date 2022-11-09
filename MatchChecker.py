@@ -7,7 +7,7 @@ mu_D = 0.08
 mu_R = 0.836
 delta_D = 1
 delta_R = 66.36
-omega_D = 1
+omega_D = float(1)
 omega_R = 0
 nu_D = 0.09
 nu_R = 0.7
@@ -65,13 +65,11 @@ diff_RR = Sr * nu_R + Er * nu_R - (omega_R + mu_R) * Rr
 print('The value of dRR/dt is')
 print(diff_RR)
 
-diff_SD = Lambda_D + omega_D*Rd + sigma_D*gamma_D_1*Ed - \
-    (mu_D + beta_RD*(Ir/Nr) + beta_DD(Id/Nd) + nu_D) * Sd
+diff_SD = Lambda_D + omega_D * Rd + sigma_D*gamma_D_1*Ed - (mu_D + beta_RD*(Ir/Nr) + beta_DD*(Id/Nd) + nu_D) * Sd
 print('The value of dSD/dt is')
 print(diff_SD)
 
-diff_ED = (beta_RD*(Ir/Nr) + beta_DD(Id/Nd))*Sd - \
-    (mu_D + sigma_D * + sigma_D*gamma_D_2 + sigma_D*gamma_D_1) * Ed
+diff_ED = (beta_RD*(Ir/Nr) + beta_DD*(Id/Nd))*Sd - (mu_D + sigma_D * + sigma_D*gamma_D_2 + sigma_D*gamma_D_1) * Ed
 print('The value of dED/dt is')
 print(diff_ED)
 
